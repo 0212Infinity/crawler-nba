@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+</head>
+<body>
+
+        <style>
+            .fl-table {
+                margin: 20px;
+                border-radius: 5px;
+                font-size: 12px;
+                border: none;
+                border-collapse: collapse;
+                max-width: 100%;
+                white-space: nowrap;
+                word-break: keep-all;
+            }
+
+            .fl-table th {
+                text-align: left;
+                font-size: 20px;
+            }
+
+            .fl-table tr {
+                display: table-row;
+                vertical-align: inherit;
+                border-color: inherit;
+            }
+
+            .fl-table tr:hover td {
+                background: #00d1b2;
+                color: #F8F8F8;
+            }
+
+            .fl-table td, .fl-table th {
+                border-style: none;
+                border-top: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-bottom: 3px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                padding: .5em .55em;
+                font-size: 15px;
+            }
+
+            .fl-table td {
+                border-style: none;
+                font-size: 15px;
+                vertical-align: center;
+                border-bottom: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                height: 30px;
+            }
+
+            .fl-table tr:nth-child(even) {
+                background: #F8F8F8;
+            }
+        </style>
+        <div id="75922b36857243638ead4d7955827a9f" class="chart-container" style="">
+            <p class="title" style="font-size: 18px; font-weight:bold;" > Table-基本示例</p>
+            <p class="subtitle" style="font-size: 12px;" > 我是副标题支持换行哦</p>
+            <table class="fl-table">
+    <thead>
+        <tr>
+            <th>年度</th>
+            <th>场数</th>
+            <th>%</th>
+            <th>三分%</th>
+            <th>罚球%</th>
+            <th>进攻</th>
+            <th>防守</th>
+            <th>场均得分</th>
+            <th>场均篮板</th>
+            <th>场均助攻</th>
+            <th>场均抢断</th>
+            <th>场均盖帽</th>
+            <th>失误</th>
+            <th>犯规</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>2021 赛季</td>
+            <td>28</td>
+            <td>46.4</td>
+            <td>38.2</td>
+            <td>81.1</td>
+            <td>10.4</td>
+            <td>35.5</td>
+            <td>111.4</td>
+            <td>45.9</td>
+            <td>23.9</td>
+            <td>6.9</td>
+            <td>4.5</td>
+            <td>12.3</td>
+            <td>17.9</td>
+        </tr>
+        <tr>
+            <td>2020 赛季</td>
+            <td>72</td>
+            <td>46.8</td>
+            <td>37.3</td>
+            <td>81.2</td>
+            <td>10.6</td>
+            <td>35.1</td>
+            <td>113.7</td>
+            <td>45.6</td>
+            <td>24.1</td>
+            <td>7.0</td>
+            <td>4.8</td>
+            <td>13.2</td>
+            <td>19.3</td>
+        </tr>
+        <tr>
+            <td>2019 赛季</td>
+            <td>67</td>
+            <td>44.9</td>
+            <td>33.3</td>
+            <td>79.0</td>
+            <td>9.9</td>
+            <td>33.4</td>
+            <td>111.8</td>
+            <td>43.3</td>
+            <td>24.0</td>
+            <td>7.8</td>
+            <td>5.1</td>
+            <td>16.2</td>
+            <td>23.1</td>
+        </tr>
+        <tr>
+            <td>2018 赛季</td>
+            <td>82</td>
+            <td>45.1</td>
+            <td>35.2</td>
+            <td>75.2</td>
+            <td>11.6</td>
+            <td>34.5</td>
+            <td>113.3</td>
+            <td>46.1</td>
+            <td>25.8</td>
+            <td>8.2</td>
+            <td>5.1</td>
+            <td>17.0</td>
+            <td>23.6</td>
+        </tr>
+        <tr>
+            <td>2017 赛季</td>
+            <td>82</td>
+            <td>44.6</td>
+            <td>36.0</td>
+            <td>78.5</td>
+            <td>9.1</td>
+            <td>32.8</td>
+            <td>103.4</td>
+            <td>41.9</td>
+            <td>23.7</td>
+            <td>7.8</td>
+            <td>4.2</td>
+            <td>15.5</td>
+            <td>19.6</td>
+        </tr>
+        <tr>
+            <td>2016 赛季</td>
+            <td>82</td>
+            <td>45.1</td>
+            <td>34.1</td>
+            <td>72.8</td>
+            <td>10.3</td>
+            <td>34.1</td>
+            <td>103.2</td>
+            <td>44.3</td>
+            <td>23.6</td>
+            <td>8.2</td>
+            <td>4.8</td>
+            <td>15.8</td>
+            <td>18.2</td>
+        </tr>
+        <tr>
+            <td>2015 赛季</td>
+            <td>82</td>
+            <td>45.8</td>
+            <td>35.0</td>
+            <td>78.3</td>
+            <td>8.3</td>
+            <td>33.8</td>
+            <td>102.8</td>
+            <td>42.1</td>
+            <td>25.6</td>
+            <td>9.1</td>
+            <td>5.9</td>
+            <td>15.0</td>
+            <td>19.2</td>
+        </tr>
+        <tr>
+            <td>2014 赛季</td>
+            <td>82</td>
+            <td>46.6</td>
+            <td>38.0</td>
+            <td>77.8</td>
+            <td>8.7</td>
+            <td>31.8</td>
+            <td>102.5</td>
+            <td>40.6</td>
+            <td>25.7</td>
+            <td>9.1</td>
+            <td>4.6</td>
+            <td>14.2</td>
+            <td>17.8</td>
+        </tr>
+        <tr>
+            <td>2013 赛季</td>
+            <td>82</td>
+            <td>45.8</td>
+            <td>36.3</td>
+            <td>78.1</td>
+            <td>8.7</td>
+            <td>31.3</td>
+            <td>101.0</td>
+            <td>40.0</td>
+            <td>24.9</td>
+            <td>8.3</td>
+            <td>4.0</td>
+            <td>15.3</td>
+            <td>19.2</td>
+        </tr>
+        <tr>
+            <td>2012 赛季</td>
+            <td>82</td>
+            <td>46.4</td>
+            <td>37.1</td>
+            <td>71.5</td>
+            <td>9.2</td>
+            <td>31.6</td>
+            <td>98.0</td>
+            <td>40.9</td>
+            <td>24.5</td>
+            <td>8.1</td>
+            <td>4.5</td>
+            <td>14.9</td>
+            <td>18.0</td>
+        </tr>
+        <tr>
+            <td>2011 赛季</td>
+            <td>66</td>
+            <td>45.4</td>
+            <td>37.0</td>
+            <td>74.0</td>
+            <td>9.9</td>
+            <td>31.3</td>
+            <td>96.6</td>
+            <td>41.2</td>
+            <td>22.4</td>
+            <td>8.1</td>
+            <td>4.6</td>
+            <td>14.0</td>
+            <td>17.8</td>
+        </tr>
+        <tr>
+            <td>2010 赛季</td>
+            <td>82</td>
+            <td>46.2</td>
+            <td>0.0</td>
+            <td>77.9</td>
+            <td>9.3</td>
+            <td>30.0</td>
+            <td>95.0</td>
+            <td>39.3</td>
+            <td>22.0</td>
+            <td>6.1</td>
+            <td></td>
+            <td>13.6</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2009 赛季</td>
+            <td>82</td>
+            <td>46.8</td>
+            <td>0.0</td>
+            <td>75.9</td>
+            <td>11.8</td>
+            <td>29.9</td>
+            <td>101.7</td>
+            <td>41.7</td>
+            <td>21.8</td>
+            <td>7.2</td>
+            <td></td>
+            <td>12.0</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2008 赛季</td>
+            <td>82</td>
+            <td>45.8</td>
+            <td>0.0</td>
+            <td>73.7</td>
+            <td>10.6</td>
+            <td>29.4</td>
+            <td>98.1</td>
+            <td>40.0</td>
+            <td>20.2</td>
+            <td>7.4</td>
+            <td></td>
+            <td>12.8</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2007 赛季</td>
+            <td>82</td>
+            <td>45.4</td>
+            <td>0.0</td>
+            <td>77.2</td>
+            <td>12.3</td>
+            <td>29.9</td>
+            <td>98.2</td>
+            <td>42.2</td>
+            <td>22.0</td>
+            <td>7.3</td>
+            <td></td>
+            <td>14.9</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2006 赛季</td>
+            <td>82</td>
+            <td>44.4</td>
+            <td>0.0</td>
+            <td>76.1</td>
+            <td>11.9</td>
+            <td>28.2</td>
+            <td>93.7</td>
+            <td>40.1</td>
+            <td>19.2</td>
+            <td>7.4</td>
+            <td></td>
+            <td>15.9</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2005 赛季</td>
+            <td>82</td>
+            <td>45.4</td>
+            <td>0.0</td>
+            <td>75.0</td>
+            <td>13.0</td>
+            <td>27.2</td>
+            <td>97.2</td>
+            <td>40.3</td>
+            <td>19.8</td>
+            <td>7.2</td>
+            <td></td>
+            <td>15.7</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2004 赛季</td>
+            <td>82</td>
+            <td>44.1</td>
+            <td>0.0</td>
+            <td>71.1</td>
+            <td>13.4</td>
+            <td>28.5</td>
+            <td>92.7</td>
+            <td>41.9</td>
+            <td>19.7</td>
+            <td>7.7</td>
+            <td></td>
+            <td>16.1</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2003 赛季</td>
+            <td>82</td>
+            <td>43.3</td>
+            <td>0.0</td>
+            <td>77.6</td>
+            <td>12.2</td>
+            <td>30.6</td>
+            <td>92.8</td>
+            <td>42.7</td>
+            <td>20.1</td>
+            <td>7.7</td>
+            <td></td>
+            <td>16.5</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2002 赛季</td>
+            <td>82</td>
+            <td>44.4</td>
+            <td>0.0</td>
+            <td>79.3</td>
+            <td>11.4</td>
+            <td>31.2</td>
+            <td>94.1</td>
+            <td>42.6</td>
+            <td>20.5</td>
+            <td>7.5</td>
+            <td></td>
+            <td>16.7</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2001 赛季</td>
+            <td>82</td>
+            <td>43.9</td>
+            <td>0.0</td>
+            <td>76.5</td>
+            <td>11.6</td>
+            <td>29.8</td>
+            <td>94.0</td>
+            <td>41.5</td>
+            <td>20.2</td>
+            <td>8.1</td>
+            <td></td>
+            <td>15.6</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2000 赛季</td>
+            <td>82</td>
+            <td>43.1</td>
+            <td>0.0</td>
+            <td>75.9</td>
+            <td>12.5</td>
+            <td>30.4</td>
+            <td>91.0</td>
+            <td>42.9</td>
+            <td>19.0</td>
+            <td>7.7</td>
+            <td></td>
+            <td>16.7</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1999 赛季</td>
+            <td>82</td>
+            <td>44.1</td>
+            <td>0.0</td>
+            <td>74.3</td>
+            <td>14.0</td>
+            <td>31.3</td>
+            <td>94.3</td>
+            <td>45.3</td>
+            <td>18.9</td>
+            <td>6.1</td>
+            <td></td>
+            <td>15.4</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1998 赛季</td>
+            <td>50</td>
+            <td>40.9</td>
+            <td>0.0</td>
+            <td>73.1</td>
+            <td>13.5</td>
+            <td>30.0</td>
+            <td>86.3</td>
+            <td>43.5</td>
+            <td>15.6</td>
+            <td>6.9</td>
+            <td></td>
+            <td>14.9</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1997 赛季</td>
+            <td>82</td>
+            <td>45.5</td>
+            <td>0.0</td>
+            <td>75.6</td>
+            <td>13.5</td>
+            <td>29.5</td>
+            <td>95.9</td>
+            <td>43.0</td>
+            <td>19.1</td>
+            <td>8.0</td>
+            <td></td>
+            <td>14.8</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1996 赛季</td>
+            <td>82</td>
+            <td>44.6</td>
+            <td>0.0</td>
+            <td>76.3</td>
+            <td>12.5</td>
+            <td>28.7</td>
+            <td>94.8</td>
+            <td>41.1</td>
+            <td>19.0</td>
+            <td>8.6</td>
+            <td></td>
+            <td>15.0</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+        </div>
+
+
+</body>
+</html>

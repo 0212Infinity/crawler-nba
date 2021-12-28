@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css')}}"/>
+    <script src="{{url_for('static', filename='jquery-3.6.0.js')}}"></script>
+    <script src="{{url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script>
+    <script>
+        //departId = {{departID}}
+        //seasonId = {{seasonID}}
+        departId = {{departID}}
+        seasonId = {{seasonID}}
+        $.ajax({
+            "type": 'get',
+            "url": '/getTeamBaseInfo',
+            "dataType": "json",
+            "success": function (data) {
+                var depart_list = data;
+                var opts = "";
+                for (var depart_index = 0; depart_index < depart_list.length; depart_index++) {
+                    var depart = depart_list[depart_index];
+                    opts += "<option ";
+                    if (departId == depart._id) {
+                        opts += " selected='selected' "
+                    }
+                    opts += " value='" + depart._id + "'>" + depart.name + "</option>";
+                }
+                $("#teamBaseInfoSelect").append(opts);
+            }
+        });
+
+        //打开页面直接执行
+        $(function () {
+            $("#season").val(seasonId)
+        })
+
+        function changeVal() {
+            var obj = document.getElementById("season");
+            var index = obj.selectedIndex;
+            var season = obj.options[index].value;
+
+            var teamBaseInfoObj = document.getElementById("teamBaseInfoSelect");
+            var teamBaseInfoIndex = teamBaseInfoObj.selectedIndex;
+            var teamBaseInfoSelect = teamBaseInfoObj.options[teamBaseInfoIndex].value;
+
+            let value = "/table/" + teamBaseInfoSelect + "/" + season; //你需要替换的地址
+            window.location.replace(value)
+        }
+    </script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <select class="form-control" id="teamBaseInfoSelect" onchange="changeVal()"></select>
+        </div>
+        <div class="col-md-3">
+            <select class="form-control" id="season" onchange="changeVal()">
+                <option value="1">常规赛平均</option>
+                <option value="2">常规赛总计</option>
+                <option value="3">季后赛平均</option>
+                <option value="4">季后赛总计</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                {% for title in titles %}
+                <th>{{title}}</th>
+                {% endfor %}
+            </tr>
+            </thead>
+
+            <tbody>
+            {% for row in rows %}
+            <tr>
+                {% for val in row %}
+                <td>{{val}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
